@@ -1,12 +1,16 @@
 server:
   port: 8080
-
+  servlet:
+    session:
+      timeout: 180000
 spring:
   datasource:
     url: jdbc:sqlserver://localhost;databaseName=development;encrypt=true;trustServerCertificate=true;
     username: sa
     password: D@vid123
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    hikari:
+      connection-timeout: 180000
   jpa:
     show-sql: true
     hibernate:
